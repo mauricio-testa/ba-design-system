@@ -1,0 +1,38 @@
+.button {
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 25px;
+	gap: 15px;
+	height: 50px;
+	border: none;
+	position: relative;
+	user-select: none;
+	box-shadow: 1px 1px 1px rgba(30, 18, 13, 0.1);
+	border-radius: 5px;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+	color: #F8FAFD;
+
+	&.disabled, &:disabled, &[disabled] {
+		opacity: .8;
+		cursor: not-allowed;
+	}
+}
+
+.button-primary {
+	@include button-variant(#0080FC, #F8FAFD);
+}
+.button-success {
+	@include button-variant(#01D4B9, #F8FAFD);
+}
+.button-danger {
+	@include button-variant(#FA4B57, #F8FAFD);
+}

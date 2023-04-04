@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mauricio-testa/builderall-vue-ui@master/src/assets/fonts/fonts.css">
+	<title>Vite App</title>
+</head>
+
+<body>
+	<!-- layout -->
+	<body class="layout">
+
+		<!-- navbar -->
+		<nav class="navbar">
+			<button class="navbar__hamburger"></button>
+			<a href="/" class="navbar__logo" ><img src="https://booking.builderall.com/images/images/meta/logo.png" alt="Logo"></a>
+		</nav>
+
+		<!-- sidebar -->
+		<nav class="sidebar">
+			<!-- menu -->
+			<ul class="menu">
+				<li class="menu__item menu-item--active">
+					<a class="menu__link">
+						<span class="menu__icon">😃</span>
+						<span class="menu__label">Opa 1</span>
+					</a>
+				</li>
+				<li class="menu__item">
+					<a class="menu__link">
+						<span class="menu__icon">😃</span>
+						<span class="menu__label">Opa 2</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- layout: content -->
+		<main class="main">
+			<div class="container">
+
+				<!-- grid system -->
+				<div class="row">
+					<div class="col-12 col-sm-6 col-lg-3"><div class="card">col</div></div>
+					<div class="col-12 col-sm-6 col-lg-3"><div class="card">col</div></div>
+					<div class="col-12 col-sm-6 col-md-4 col-lg-3"><div class="card">col</div></div>
+					<div class="col-12 col-sm-6 col-md-8 col-lg-3"><div class="card">col</div></div>
+				</div>
+
+				<div class="row" style="justify-content:center">
+					<div class="col-6 col-md-4"><div class="card">col</div></div>
+					<div class="col-6 col-md-4"><div class="card">col</div></div>
+				</div>
+
+				<div class="row">
+					<div class="col"><div class="card">col</div></div>
+					<div class="col-12 col-md-6">
+						<div class="row">
+							<div class="col-6"><div class="card">subcol</div></div>
+							<div class="col-6"><div class="card">subcol</div></div>
+						</div>
+					</div>
+				</div>
+
+				<br>
+
+				<!-- buttons -->
+				<button class="button button-primary">Primary</button>
+				<button class="button button-success"><span>😃</span>Success with icon</button>
+				<button class="button button-danger" disabled>Danger disabled</button>
+
+				<br><br>
+
+				<!-- progress -->
+				<div class="progress">
+					<div class="progress-status" style="width:45%">45%</div>
+				</div>
+
+				<br><br>
+
+				<!-- form -->
+				<form action="" class="form">
+					<div class="field">
+						<label for="name">Name</label>
+						<input type="text" placeholder="Name" id="name">
+					</div>
+					<div class="field required has-errors">
+						<label for="fruit">Fruit</label>
+						<select name="fruit" id="fruit">
+							<option value="banana">Banana</option>
+							<option value="orange" selected>Orange</option>
+							<option value="apple">Apple</option>
+						</select>
+						<span class="feedback-error">Fruit is required!</span>
+					</div>
+				</form>
+			
+			</div>
+		</main>
+	</body>
+	<script type="module" src="/main.js"></script>
+</body>
+
+</html>

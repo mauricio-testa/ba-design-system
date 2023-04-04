@@ -1,0 +1,30 @@
+@import './variables';
+@import './mixins';
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+
+	.col {
+		flex: 1;
+	}
+
+	[class^="col"] {
+		box-sizing: border-box;
+	}
+
+	@include grid-factory("col");
+
+	@media screen and (min-width: $breakpoint-sm) {
+		@include grid-factory("col-sm");
+	}
+
+	@media screen and (min-width: $breakpoint-md) {
+		@include grid-factory("col-md");
+	}
+
+	@media screen and (min-width: $breakpoint-lg) {
+		@include grid-factory("col-lg");
+	}
+}

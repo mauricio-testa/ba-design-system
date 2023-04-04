@@ -1,0 +1,55 @@
+@import './mixins';
+
+.form {
+	.field {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 15px;
+
+		> * {
+			margin-bottom: 2px;
+		}
+
+		&.required label:after {
+			content: "*";
+			color: red;
+			position: absolute;
+			padding: 0 2px;
+		}
+
+		.feedback-error {
+			display: none;
+			color: red;
+			font-size: 12px;
+		}
+
+		select {
+			appearance: none;
+			@include select-arrow-down();
+			&:focus {
+				@include select-arrow-up();
+			}
+		}
+
+		select, input[type=text] {
+			border: 1px solid #e2e4e9;
+			color: #495057;
+			border-radius: 4px;
+			padding: 10px 15px;
+			height: 45px;
+			box-sizing: border-box;
+			&:focus {
+				outline: none;
+			}
+		}
+
+		&.has-errors {
+			select, input[type=text] {
+				border: 1px solid red;
+			}
+			.feedback-error {
+				display: block;
+			}
+		}
+	}
+}
